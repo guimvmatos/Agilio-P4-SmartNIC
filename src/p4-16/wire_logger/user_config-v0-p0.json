@@ -1,0 +1,40 @@
+{
+    "tables": {
+        "ingress::in_tbl": {
+            "rules": [
+               {
+                   "name": "v0_to_p0", 
+                   "match": {
+                        "standard_metadata.ingress_port": {
+                            "value": "v0.0"
+                        }
+                    },
+                    "action": {
+                       "type": "ingress::forward",
+                       "data": {
+                            "port": {
+                                "value": "p0"
+                            }
+                        } 
+                    } 
+               }, 
+                {
+                   "name": "p0_to_v0", 
+                   "match": {
+                        "standard_metadata.ingress_port": {
+                            "value": "p0"
+                        }
+                   },
+                   "action": {
+                        "type": "ingress::forward",
+                        "data": {
+                            "port": {
+                                "value": "v0.0"
+                            }
+                        } 
+                    } 
+                }
+            ]
+        }
+    }
+}

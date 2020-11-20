@@ -1,0 +1,41 @@
+{
+"tables": {
+    "ingress::ipv4_lpm": {
+        "rules": [
+        {
+            "name": "v0_to_v1",
+            "match": 
+                { "ipv4.dstAddr" : { "value" : "10.0.0.2/32" } },
+            "action": {
+                "type": "ingress::ipv4_forward",
+                "data": {
+                    "dstAddr": { 
+                        "value": "00:15:4d:00:00:01" 
+                    },
+                    "port": { 
+                        "value": "v0.1" 
+                    }
+                }
+            }
+        },
+        {
+            "name": "v1_to_v0",
+            "match": 
+                { "ipv4.dstAddr": { "value": "10.0.0.1/32" } },
+            "action": {
+                "type": "ingress::ipv4_forward",
+                "data": {
+                    "dstAddr": { 
+                        "value": "00:15:4d:00:00:00" 
+                    },
+                    "port": { 
+                        "value": "v0.0" 
+                    }
+                }
+            }
+        }
+        ]
+     }
+}
+
+}

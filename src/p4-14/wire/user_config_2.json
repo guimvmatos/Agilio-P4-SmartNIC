@@ -1,0 +1,77 @@
+{
+    "tables": {
+        "in_tbl": {
+	    "default_rule" : {
+		"name" : "default",
+		"action" : { "type" : "drop_act" }
+		},
+            "rules": [
+               {
+		   "name": "p1_to_pv",
+	           "match": {
+                        "standard_metadata.ingress_port": {
+                            "value": "p1"
+                        }
+		   },
+	   	   "action": {
+			"type": "fwd_act",
+                        "data": {
+                            "prt": {
+                                "value": "v0.1"
+                            }
+                        }
+                   }
+                },
+               {
+		   "name": "pv_to_p1",
+	           "match": {
+                        "standard_metadata.ingress_port": {
+                            "value": "v0.1"
+                        }
+		   },
+	   	   "action": {
+			"type": "fwd_act",
+                        "data": {
+                            "prt": {
+                                "value": "p1"
+                            }
+                        }
+                   }
+                },
+               {
+		   "name": "p0_to_pv",
+	           "match": {
+                        "standard_metadata.ingress_port": {
+                            "value": "p0"
+                        }
+		   },
+	   	   "action": {
+			"type": "fwd_act",
+                        "data": {
+                            "prt": {
+                                "value": "v0.0"
+                            }
+                        }
+                   }
+                },
+		{
+                    "name": "pv_to_p0", 
+                    "match": {
+                        "standard_metadata.ingress_port": {
+                            "value": "v0.0"
+                        }
+                    },
+                    "action": {
+                        "type": "fwd_act",
+                        "data": {
+                            "prt": {
+                                "value": "p0"
+                            }
+                        }
+		    }
+		}	    
+            ]
+        }
+    }
+}
+

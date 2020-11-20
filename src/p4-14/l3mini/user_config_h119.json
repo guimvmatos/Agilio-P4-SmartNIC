@@ -1,0 +1,38 @@
+{
+	"doc": "Table configurations for l3minifwd",
+	"tables" : {
+		"fwd_tbl" : {
+			"default_rule" : {
+				"name" : "default",
+				"action" : { "type" : "drop_act" }
+			},
+				
+			"rules" : [
+				{
+					"name" : "rule_1",
+					"match" : {
+						"ipv4.dst" : { "value" : "10.10.25.118/32" }
+					},
+					"action" : {
+						"type" : "fwd_act",
+						"data" : {
+							"port" : { "value" : "p0" }
+						}
+					}
+				},
+				{
+					"name" : "rule_0",
+					"match" : {
+						"ipv4.dst" : { "value" : "10.10.25.0/24" }
+					},
+					"action" : {
+						"type" : "fwd_act",
+						"data" : {
+							"port" : { "value" : "v0.0" }
+						}
+					}
+				}
+			]
+		}
+	}
+}

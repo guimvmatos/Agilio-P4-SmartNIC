@@ -1,0 +1,41 @@
+{
+    "tables": {
+        "in_tbl": {
+            "rules": [
+                {
+		   "name": "p0_to_pv",
+	           "match": {
+                        "standard_metadata.ingress_port": {
+                            "value": "p0"
+                        }
+		   },
+	   	   "action": {
+			"type": "fwd_act",
+                        "data": {
+                            "prt": {
+                                "value": "v0.0"
+                            }
+                        }
+                   }
+                },
+		{
+                    "name": "pv_to_p0", 
+                    "match": {
+                        "standard_metadata.ingress_port": {
+                            "value": "v0.0"
+                        }
+                    },
+                    "action": {
+                        "type": "fwd_act",
+                        "data": {
+                            "prt": {
+                                "value": "p0"
+                            }
+                        }
+		    }
+		}	    
+            ]
+        }
+    }
+}
+

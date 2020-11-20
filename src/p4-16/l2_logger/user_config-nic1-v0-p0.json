@@ -1,0 +1,52 @@
+{
+    "tables": {
+        "ingress::l2_table": {
+            "rules": [
+               {
+                   "name": "nic1_v0_to_p0", 
+                   "match": {
+                        "standard_metadata.ingress_port": {
+                            "value": "v0.0"
+                        },
+                        "ethernet.srcAddr": {
+                            "value": "ca:17:9d:ea:33:4e"
+                        }
+                    },
+                    "action": {
+                       "type": "ingress::l2_forward",
+                       "data": {
+                            "port": {
+                                "value": "p0"
+                            },
+                            "dstAddr": {
+                                "value": "8e:fa:f0:db:3f:fc"
+                            }
+                        } 
+                    } 
+               }, 
+                {
+                   "name": "nic1_p0_to_v0", 
+                   "match": {
+                        "standard_metadata.ingress_port": {
+                            "value": "p0"
+                        },
+                        "ethernet.srcAddr": {
+                            "value": "8e:fa:f0:db:3f:fc"
+                        }
+                   },
+                   "action": {
+                        "type": "ingress::l2_forward",
+                        "data": {
+                            "port": {
+                                "value": "v0.0"
+                            },
+                            "dstAddr": {
+                                "value": "ca:17:9d:ea:33:4e"
+                            }
+                        } 
+                    } 
+                }
+            ]
+        }
+    }
+}

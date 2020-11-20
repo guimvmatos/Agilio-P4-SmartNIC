@@ -1,0 +1,18 @@
+; NFP SDK license issued by Netronome Systems, Inc.
+; Contact support@netronome.com should assistance be required.
+
+[Customer]
+User=Guilherme Matos
+Email=guimvmatos1@outlook.com
+Company=UFSCar
+Seats=1
+
+[NFP-SDK]
+
+[License]
+Expires=2021-11-18
+Issuer=octavio.ruiz@netronome.com
+Serial=326662
+
+Issued=2020-11-18
+Signature=G1H40GG3OBAVGA0PTTF5V2J6UUIQ57JRDBJU6GA62BKFJN7FDFKDV2TQEH00IOOEIIM44BJ1F96SO9G729M3CDRPEKSLPNFGB856HJ6GHM0TDMAI

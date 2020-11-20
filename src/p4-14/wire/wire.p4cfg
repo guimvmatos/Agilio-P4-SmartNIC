@@ -1,0 +1,47 @@
+{
+    "registers": {
+        "configs": []
+    }, 
+    "tables": {
+        "in_tbl": {
+            "rules": [
+                {
+                    "action": {
+                        "type": "fwd_act", 
+                        "data": {
+                            "prt": {
+                                "value": "p1"
+                            }
+                        }
+                    }, 
+                    "name": "host_to_net", 
+                    "match": {
+                        "standard_metadata.ingress_port": {
+                            "value": "v0.0"
+                        }
+                    }
+                }, 
+                {
+                    "action": {
+                        "type": "fwd_act", 
+                        "data": {
+                            "prt": {
+                                "value": "v0.0"
+                            }
+                        }
+                    }, 
+                    "name": "net_to_host", 
+                    "match": {
+                        "standard_metadata.ingress_port": {
+                            "value": "p1"
+                        }
+                    }
+                }
+            ]
+        }
+    }, 
+    "multicast": {}, 
+    "meters": {
+        "configs": []
+    }
+}

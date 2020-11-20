@@ -1,0 +1,40 @@
+{
+    "tables": {
+        "in_tbl": {
+            "rules": [
+                {
+                    "action": {
+                        "data": {
+                            "prt": {
+                                "value": "p1"
+                            }
+                        }, 
+                        "type": "fwd_act"
+                    }, 
+                    "name": "p0_to_p4", 
+                    "match": {
+                        "standard_metadata.ingress_port": {
+                            "value": "p0"
+                        }
+                    }
+                }, 
+                {
+                    "action": {
+                        "data": {
+                            "prt": {
+                                "value": "p0"
+                            }
+                        }, 
+                        "type": "fwd_act"
+                    }, 
+                    "name": "p4_to_p0", 
+                    "match": {
+                        "standard_metadata.ingress_port": {
+                            "value": "p1"
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}
