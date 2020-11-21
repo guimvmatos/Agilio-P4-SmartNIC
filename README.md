@@ -5,7 +5,7 @@
 This repository shows how to use the P4 language (https://p4.org) on Netronome SmartNICs (https://www.netronome.com/). 
 Through the Linux OS, the Agilio P4C SDK allows to use the SmartNICs for packet processing and forwarding, using P4 programs.
 Currently, Agilio P4C SDK supports P4-14 version 1.0 (1.1 stills experimental, according to the Netronome) and P4-16 on Preview release.
-Please refer to [Netronome Documentation](https://github.com/DiegoRossiMafioletti/smartnic-p4/blob/master/agilio-sdk/doc/release-notes-nfp-sdk-rn-6.0.4.1-3276.pdf) for terminology and more detailed information about the SmartNICs.
+Please refer to [Netronome Documentation](https://github.com/guimvmatos/Agilio-P4-SmartNIC/blob/main/Gerenal_Docs/nfp-sdk-rn-6.1.0.1-preview-3286.pdf) for terminology and more detailed information about the SmartNICs.
 
 
 ## Requirements
