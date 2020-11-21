@@ -28,9 +28,9 @@ Please refer to [Netronome Documentation](https://github.com/guimvmatos/Agilio-P
 ```
 
 ```bash
-$ cd install/
+$ $ cd Agilio-P4-SmartNIC/install/
 $ tar xzf nfp-sdk-p4-rte-6.1.0.1-preview-3214.ubuntu.x86_64.tgz
-$ cd nfp-sdk-6-rte*
+$ cd nfp-sdk-6-rte-v6.1.0.1-preview-Ubuntu-Release-r2750-2018-10-10-ubuntu.binary/
 $ sudo ./sdk6_rte_install.sh install
 ```
 
@@ -45,7 +45,7 @@ $ sudo ./sdk6_rte_install.sh install_force_bsp
 
 3.1. Ubuntu:
 ```bash
-$ cd install/
+$ cd ..
 $ sudo dpkg -i nfp-sdk_6.1.0.1-preview-3243-2_amd64.deb
 ```
 
